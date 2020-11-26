@@ -1,7 +1,11 @@
 package com.ding.sm.factory;
 
-import com.ding.sm.serive.AdminSerive;
-import com.ding.sm.serive.impl.AdminSeriveImpl;
+import com.ding.sm.serive.AdminService;
+import com.ding.sm.serive.ClazzService;
+import com.ding.sm.serive.DepartmentService;
+import com.ding.sm.serive.impl.AdminServiceImpl;
+import com.ding.sm.serive.impl.AdminServiceImpl;
+import com.ding.sm.serive.impl.ClazzServiceImpl;
 import com.ding.sm.serive.impl.DepartmentServiceImpl;
 
 /**
@@ -11,10 +15,17 @@ import com.ding.sm.serive.impl.DepartmentServiceImpl;
  * @Date 2020/11/15
  **/
 public class ServiceFactory {
-    public static AdminSerive getAdminServiceInstance(){
-        return new AdminSeriveImpl();
+    public static AdminService getAdminServiceInstance() {
+
+        return new AdminServiceImpl();
     }
-    public static DepartmentServiceImpl getDepartmentServiceInstance(){
+
+    public static DepartmentService getDepartmentServiceInstance() {
         return new DepartmentServiceImpl();
+    }
+
+
+    public static ClazzService getClazzServiceInstance() {
+        return new ClazzServiceImpl();
     }
 }

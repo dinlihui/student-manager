@@ -19,10 +19,9 @@ public class AdminDaoImpl implements AdminDao {
 
     @Override
     public Admin findAdminByAccount(String account) throws SQLException {
-
         JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
-        Connection connection = jdbcUtil.getConnection();
-        String sql = "select * from t_admin where account = ?";
+        Connection connection = JdbcUtil.getConnection();
+        String sql = "SELECT * FROM t_admin WHERE account = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setString(1, account);
         ResultSet rs = pstmt.executeQuery();
@@ -37,11 +36,13 @@ public class AdminDaoImpl implements AdminDao {
             admin.setAccount(adminAccount);
             admin.setPassword(password);
             admin.setAdminName(adminName);
+
         }
         rs.close();
         pstmt.close();
         jdbcUtil.closeConnection();
         return admin;
+
 
     }
 }

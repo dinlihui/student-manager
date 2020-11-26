@@ -56,7 +56,7 @@ public class JdbcUtil {
      *
      * @return CONNECTION
      */
-    public Connection getConnection() {
+    public static Connection getConnection() {
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
@@ -80,7 +80,7 @@ public class JdbcUtil {
     }
 
     public static void main(String[] args) {
-        Connection connection = JdbcUtil.getInitJdbcUtil().getConnection();
+        Connection connection = getConnection();
         if (connection != null) {
             System.out.println("连接成功");
         }

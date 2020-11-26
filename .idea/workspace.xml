@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02a96f60-a74c-4e87-88cd-8e5e0e6813be" name="Default Changelist" comment="" />
+    <list default="true" id="02a96f60-a74c-4e87-88cd-8e5e0e6813be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/ClazzDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/ClazzDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/StudentDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/entity/Clazz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/ClazzService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/AdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/ClazzServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/utils/AliOSSUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/vo/StudentVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ding/sm/dao/ClazzDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ding/sm/dao/StudentDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ding/sm/serive/AdminServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/AdminDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/DepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/DepartmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/AdminDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/AdminDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/DepartmentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/DepartmentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/factory/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/factory/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/factory/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/factory/ServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/AdminLoginFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/AdminLoginFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/AdminLoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/AdminLoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/AdminSerive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/DepartmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/AdminSeriveImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/utils/JdbcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/utils/JdbcUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ding/sm/serive/AdminSeriveTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/DepartmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/DepartmentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/AdminDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/AdminDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/DepartmentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/DepartmentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/factory/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/factory/DaoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/factory/ServiceFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/factory/ServiceFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/frame/AdminLoginFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/frame/AdminLoginFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/frame/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/frame/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/AdminSerive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/DepartmentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/impl/AdminSeriveImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/impl/DepartmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/impl/DepartmentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/utils/JdbcUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/utils/JdbcUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ding/sm/serive/AdminSeriveTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ding/sm/serive/DepartmentServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ding/sm/serive/DepartmentServiceTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="15" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -48,11 +100,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
         <option value="JUnit4 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -64,6 +119,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1kIztuuCX2gPxph4dfAyaOp085I" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -72,14 +128,14 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="213" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="264" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="43" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="445" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-daily" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/ding/sm/frame" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -89,18 +145,38 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.ding.sm.serive" />
       <recent name="com.ding.sm.dao" />
+      <recent name="com.ding.sm.serive" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\student-manager\src\main\java\com\ding\sm\frame" />
+      <recent name="E:\student-manager\src\main\java\com\ding\sm\serive\impl" />
+      <recent name="E:\student-manager\src\main\java\com\ding\sm\serive" />
+      <recent name="E:\student-manager\src\main\java\com\ding\sm" />
+      <recent name="E:\student-manager\src\main\java\com\ding\sm\factory" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MainFrame">
+  <component name="RunManager" selected="Application.AdminLoginFrame">
+    <configuration name="AdminLoginFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ding.sm.frame.AdminLoginFrame" />
+      <module name="student-manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ding.sm.frame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ding.sm.frame.MainFrame" />
       <module name="student-manager" />
@@ -114,22 +190,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="student-manager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ding.sm.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ding.sm.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.ding.sm.dao.AdminDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdminSeriveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="student-manager" />
       <extension name="coverage">
         <pattern>
@@ -138,13 +199,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ding.sm.serive" />
-      <option name="MAIN_CLASS_NAME" value="com.ding.sm.serive.AdminSeriveTest" />
+      <option name="MAIN_CLASS_NAME" value="com.ding.sm.serive.AdminServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="student-manager" />
       <extension name="coverage">
         <pattern>
@@ -153,34 +214,35 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ding.sm.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.ding.sm.dao.DepartmentDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.ding.sm.dao.StudentDaoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentDaoTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="student-manager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ding.sm.serive.*" />
+          <option name="PATTERN" value="com.ding.sm.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ding.sm.serive" />
-      <option name="MAIN_CLASS_NAME" value="com.ding.sm.serive.DepartmentServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.ding.sm.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.ding.sm.dao.StudentDaoTest" />
+      <option name="METHOD_NAME" value="selectAll" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AdminLoginFrame" />
         <item itemvalue="Application.MainFrame" />
-        <item itemvalue="JUnit.DepartmentServiceTest" />
-        <item itemvalue="JUnit.DepartmentDaoTest" />
-        <item itemvalue="JUnit.AdminDaoTest" />
-        <item itemvalue="JUnit.AdminSeriveTest" />
+        <item itemvalue="JUnit.StudentDaoTest" />
+        <item itemvalue="JUnit.AdminServiceTest" />
+        <item itemvalue="JUnit.StudentDaoTest.selectAll" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +267,20 @@
       <workItem from="1605523221238" duration="4440000" />
       <workItem from="1605531073808" duration="2548000" />
       <workItem from="1605570689959" duration="659000" />
-      <workItem from="1605622980869" duration="5128000" />
+      <workItem from="1605622980869" duration="5391000" />
+      <workItem from="1605666808140" duration="1379000" />
+      <workItem from="1605696199916" duration="1749000" />
+      <workItem from="1605698020369" duration="1438000" />
+      <workItem from="1605700092069" duration="78000" />
+      <workItem from="1605791742844" duration="1278000" />
+      <workItem from="1605798590459" duration="3699000" />
+      <workItem from="1605829982791" duration="974000" />
+      <workItem from="1605867983504" duration="1705000" />
+      <workItem from="1605869731124" duration="2069000" />
+      <workItem from="1605871844926" duration="7578000" />
+      <workItem from="1606109701324" duration="12135000" />
+      <workItem from="1606217446182" duration="1468000" />
+      <workItem from="1606375057395" duration="553000" />
     </task>
     <servers />
   </component>
@@ -213,38 +288,42 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="589" y="66" key="#SQL_Dialects" timestamp="1606120778795">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="589" y="66" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1606120778795" />
     <state x="621" y="97" width="814" height="670" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605412840321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="621" y="97" width="814" height="670" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605412840321" />
-    <state x="903" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1605627828848">
+    <state x="903" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1606118875406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="903" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605627828848" />
-    <state x="774" y="168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605625368767">
+    <state x="903" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606118875406" />
+    <state x="774" y="168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606116366562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="774" y="168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605625368767" />
-    <state x="253" y="105" key="FileChooserDialogImpl" timestamp="1605419087243">
+    <state x="774" y="168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606116366562" />
+    <state x="253" y="105" key="FileChooserDialogImpl" timestamp="1606115171745">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="253" y="105" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605419087243" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1605627864725">
+    <state x="253" y="105" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606115171745" />
+    <state width="1493" height="28" key="GridCell.Tab.0.bottom" timestamp="1606375508193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605627864725" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1605627864724">
+    <state width="1493" height="28" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606375508193" />
+    <state width="1493" height="28" key="GridCell.Tab.0.center" timestamp="1606375508193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605627864724" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1605627864724">
+    <state width="1493" height="28" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606375508193" />
+    <state width="1493" height="28" key="GridCell.Tab.0.left" timestamp="1606375508193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605627864724" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1605627864724">
+    <state width="1493" height="28" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606375508193" />
+    <state width="1493" height="28" key="GridCell.Tab.0.right" timestamp="1606375508193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605627864724" />
+    <state width="1493" height="28" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606375508193" />
     <state width="1493" height="223" key="GridCell.Tab.1.bottom" timestamp="1605419713519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -265,29 +344,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1605409213562" />
-    <state x="351" y="94" key="Maven.ArtifactSearchDialog" timestamp="1605422592936">
+    <state x="351" y="94" key="Maven.ArtifactSearchDialog" timestamp="1606116184077">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="351" y="94" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1605422592936" />
-    <state x="272" y="0" key="SettingsEditor" timestamp="1605531302519">
+    <state x="351" y="94" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1606116184077" />
+    <state x="230" y="50" key="SettingsEditor" timestamp="1606115401351">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605531302519" />
+    <state x="230" y="50" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606115401351" />
     <state x="837" y="211" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1605409435316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="837" y="211" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1536.824@0.0.1536.824" timestamp="1605409435316" />
-    <state x="998" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1605625590554">
+    <state x="998" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1606120280273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="998" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1605625590554" />
+    <state x="998" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1606120280273" />
     <state x="356" y="0" key="new project wizard" timestamp="1605410352608">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="356" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1605410352608" />
+    <state x="447" y="45" width="907" height="677" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1606115234676">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="447" y="45" width="907" height="677" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1606115234676" />
     <state x="703" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1605533213319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="703" y="49" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1605533213319" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606115943095">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606115943095" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/student_manager$MainFrame.ic" NAME="MainFrame Coverage Results" MODIFIED="1605878722006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ding.sm.frame.*</FILTER>
+    </SUITE>
   </component>
 </project>

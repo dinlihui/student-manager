@@ -14,14 +14,15 @@ import java.awt.*;
  * @Author 15696
  * @Date 2020/11/15
  **/
-public class AdminLoginFrame extends JFrame  {
+public class AdminLoginFrame extends JFrame{
     private JPanel mainPanel;
+    private JLabel 账号;
     private JTextField accountField;
+    private JLabel 密码;
     private JPasswordField passwordField;
     private JButton loginBtn;
     private JButton resetBtn;
-
-    public AdminLoginFrame(){
+    public AdminLoginFrame() {
         this.setTitle("AdminLoginFrame");
         this.setContentPane(mainPanel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,31 +30,32 @@ public class AdminLoginFrame extends JFrame  {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-        loginBtn.addActionListener(e ->{
-
+        loginBtn.addActionListener(e -> {
+            //获取输入的账号和密码，注意密码框的组件的使用方法
             String account = accountField.getText().trim();
             String password = new String(passwordField.getPassword()).trim();
-            ResultEntity resultEntity = ServiceFactory.getAdminServiceInstance().adminLogin(account,
-                    password);
-            JOptionPane.showMessageDialog(mainPanel,resultEntity.getMessage());
+            ResultEntity resultEntity = ServiceFactory.getAdminServiceInstance().adminLogin(account, password);
+            JOptionPane.showMessageDialog(mainPanel, resultEntity.getMessage());
             if (resultEntity.getCode() == 0) {
+                //关闭登录界面，进入主界面
                 this.dispose();
                 new MainFrame();
-            }else{
+            } else {
                 accountField.setText("");
                 passwordField.setText("");
             }
         });
-
         resetBtn.addActionListener(e -> {
             accountField.setText("");
             passwordField.setText("");
         });
     }
 
+
     public static void main(String[] args) {
         new AdminLoginFrame();
     }
+
 }
 
 
