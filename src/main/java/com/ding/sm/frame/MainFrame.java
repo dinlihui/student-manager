@@ -1,19 +1,26 @@
 package com.ding.sm.frame;
 
-import com.ding.sm.entity.Department;
+
+import com.ding.sm.component.CustomPanel;
 import com.ding.sm.entity.Clazz;
 import com.ding.sm.entity.Department;
+import com.ding.sm.entity.FormatUtil;
 import com.ding.sm.factory.ServiceFactory;
 import com.ding.sm.utils.AliOSSUtil;
+import com.ding.sm.vo.StudentVo;
+import sun.swing.table.DefaultTableCellHeaderRenderer;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumn;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.io.File;
+import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -51,14 +58,24 @@ public class MainFrame extends JFrame {
     private JButton 新增班级Button;
     private JPanel treePanel;
     private JPanel classContentPanel;
+    private JComboBox<Department> departmentJBox;
+    private JComboBox<Clazz> clazzJBox;
+    private JTextField searchField;
+    private JButton 搜索Button;
+    private JButton 新增学生Button;
+    private JButton 批量导入Button;
+    private JPanel tablePanel;
 
     private final CardLayout c;
     private String upLoadFileUrl;
     private File file;
+    private List<StudentVo> students;
     /**
      * 选择的院系id
      */
     private int departmentId = 0;
+
+    StudentVo studentVo;
 
     public MainFrame() {
         init();
@@ -68,6 +85,18 @@ public class MainFrame extends JFrame {
         centerPanel.add("2", classPanel);
         centerPanel.add("3", studentPanel);
         centerPanel.add("4", rewardPanel);
+
+        studentVo = StudentVo.builder()
+                .departmentName("院系")
+                .className("班级")
+                .studentName("姓名")
+                .avatar("https://zsj-bucket.oss-cn-beijing.aliyuncs.com/picture/leoo.jpg")
+                .gender((short)2)
+                .birthday(new Date())
+                .phone("13951905171")
+                .address("江苏南京")
+                .build();
+
         院系管理button.addActionListener(e -> {
             c.show(centerPanel, "1");
             showDepartments();
@@ -170,9 +199,130 @@ public class MainFrame extends JFrame {
                 JOptionPane.showMessageDialog(centerPanel, "新增班级失败");
             }
         });
+        学生管理button.addActionListener(e -> {
+            c.show(centerPanel,"3");
+            //学生数据填充表格
+            showStudents(ServiceFactory.getStudentServiceInstance().selectAll());
+
+            //初始化院系下拉框数据，第一条数据为提示信息
+            departmentJBox.addItem(Department.builder().departmentName("请选择院系").build());
+            List<Department> departments = ServiceFactory.getDepartmentServiceInstance().selectAll();
+            for (Department department : departments) {
+                departmentJBox.addItem(department);
+            }
+
+            //初始化班级下拉框数据
+            clazzJBox.addItem(Clazz.builder().className("请选择班级").build());
+            List<Clazz> clazzes = ServiceFactory.getClazzServiceInstance().selectAll();
+            for (Clazz clazz : clazzes) {
+                clazzJBox.addItem(clazz);
+            }
+            //右侧个人信息面板
+            CustomPanel stuInfoPanel = new CustomPanel("D:\\java learning\\student-manager\\src\\main\\resources\\img\\shower.png");
+            stuInfoPanel.setPreferredSize(new Dimension(300, 600));
+            stuInfoPanel.setLayout(null);
+            stuInfoPanel.repaint();
+            studentPanel.add(stuInfoPanel, BorderLayout.EAST);
+            JLabel title = new JLabel("学生信息");
+            title.setFont(new Font("楷体", Font.BOLD, 20));
+            title.setForeground(new Color(97, 174, 239));
+            title.setBounds(100,50,100,50);
+            //stuInfoPanel.add(title);
+            //头像
+            JLabel avatar = new JLabel("<html><img src= '" + studentVo.getAvatar() + "' width=50 height=50/><ml>");
+            avatar.setBounds(120, 110, 50, 50);
+            //院系
+            JTextField depName = new JTextField(studentVo.getDepartmentName());
+            depName.setBounds(50,170,200,40);
+            //班级
+            JTextField className = new JTextField(studentVo.getClassName());
+            className.setBounds(50,220,200,40);
+            //姓名
+            JTextField stuName = new JTextField(studentVo.getStudentName());
+            stuName.setBounds(50,270,200,40);
+            //性别
+            JTextField gender = new JTextField(FormatUtil.formatGender(studentVo.getGender()));
+            gender.setBounds(50,320,200,40);
+            //生日
+            JTextField birthday = new JTextField(FormatUtil.formatDate(studentVo.getBirthday()));
+            birthday.setBounds(50,370,200,40);
+            //电话
+            JTextField phone = new JTextField(studentVo.getPhone());
+            phone.setBounds(50,420,200,40);
+            //地址
+            JTextField address = new JTextField(studentVo.getAddress());
+            address.setBounds(50,470,200,40);
+            //操作按钮
+            JButton opButton = new JButton("编辑");
+            opButton.setBounds(100,520,120,40);
+
+            stuInfoPanel.add(title);
+            stuInfoPanel.add(avatar);
+            stuInfoPanel.add(depName);
+            stuInfoPanel.add(className);
+            stuInfoPanel.add(stuName);
+            stuInfoPanel.add(gender);
+            stuInfoPanel.add(birthday);
+            stuInfoPanel.add(phone);
+            stuInfoPanel.add(address);
+            stuInfoPanel.add(opButton);
 
 
+        });
+
+        departmentJBox.addItemListener(e1 -> {
+            if (e1.getStateChange() == ItemEvent.SELECTED) {
+                //排除第一条数据
+                int index = departmentJBox.getSelectedIndex();
+                if (index != 0) {
+                    Integer depId = departmentJBox.getItemAt(index).getId();
+                    students = ServiceFactory.getStudentServiceInstance().selectByDepId(depId);
+                    showStudents(students);
+                    List<Clazz> clazzList = ServiceFactory.getClazzServiceInstance().getClazzByDepId(depId);
+                    clazzJBox.removeAllItems();
+                    clazzJBox.addItem(Clazz.builder().className("请选择班级").build());
+                    for (Clazz clazz : clazzList){
+                        clazzJBox.addItem(clazz);
+                    }
+                }else {
+                    students = ServiceFactory.getStudentServiceInstance().selectAll();
+                    showStudents(students);
+                    clazzJBox.removeAllItems();
+                    clazzJBox.addItem(Clazz.builder().className("请选择班级").build());
+                    List<Clazz> clazzList = ServiceFactory.getClazzServiceInstance().selectAll();
+                    for (Clazz clazz : clazzList) {
+                        clazzJBox.addItem(clazz);
+                    }
+                }
+            }
+        });
+        //班级下拉框监听
+        clazzJBox.addItemListener(e2 -> {
+            if (e2.getStateChange() == ItemEvent.DESELECTED) {
+                int index = clazzJBox.getSelectedIndex();
+                if (index != 0) {
+                    Integer classId = clazzJBox.getItemAt(index).getId();
+                    List<StudentVo> studentList = ServiceFactory.getStudentServiceInstance().selectByClassId(classId);
+                    showStudents(studentList);
+                }else{
+                    //复原数据
+                    clazzJBox.removeAllItems();
+                    clazzJBox.addItem(Clazz.builder().className("请选择班级").build());
+                    List<Clazz> clazzList = ServiceFactory.getClazzServiceInstance().selectAll();
+                    for (Clazz clazz : clazzList) {
+                        clazzJBox.addItem(clazz);
+                    }
+                }
+            }
+        });
+        搜索Button.addActionListener(e -> {
+            students = ServiceFactory.getStudentServiceInstance().selectByKeywords(searchField.getText().trim());
+            showStudents(students);
+            searchField.setText("");
+        });
     }
+
+
 
     public void init() {
         this.setTitle("管理员界面");
@@ -194,8 +344,83 @@ public class MainFrame extends JFrame {
     private void showConbobox(List<Department> departments) {
         for (Department department : departments) {
             depCombobox.addItem(department);
+
         }
     }
+
+    private void showStudents(List<StudentVo> students){
+//        CustomPanel stuInfoPanel = new CustomPanel("/D:/qq.png");
+//        stuInfoPanel.setPreferredSize(new Dimension(300, 600));
+//        JLabel title = new JLabel("学生信息");
+//        title.setFont(new Font("楷体", Font.BOLD, 20));
+//        title.setForeground(new Color(97, 174, 239));
+//        stuInfoPanel.add(title);
+//        stuInfoPanel.repaint();
+//        studentPanel.add(stuInfoPanel, BorderLayout.EAST);
+
+        //获得学生列表数据
+//        List<StudentVo> students = ServiceFacotry.getStudentServiceInstance().selectAll();
+        tablePanel.removeAll();
+        //创建表格对象
+        JTable table = new JTable();
+        //创建表格数据模型，并设置给表格
+        DefaultTableModel model = new DefaultTableModel();
+        table.setModel(model);
+        //设置表头内容
+        model.setColumnIdentifiers(new String[]{"学号","院系","班级","姓名","性别","地址","手机号","出生日期","头像"});
+        //遍历list，生成Object数组，数组中的每个元素就是一行记录
+        for (StudentVo student : students) {
+            Object[] object = new Object[]{
+                    student.getId(),student.getDepartmentName(),student.getClassName(),student.getStudentName(),
+                    student.getGender(),student.getAddress(),student.getPhone(),student.getBirthday(),student.getAvatar()
+            };
+            //添加到数据模型
+            model.addRow(object);
+        }
+        //设置最后一列不显示在表格中
+        TableColumn tc = table.getColumnModel().getColumn(8);
+        tc.setMaxWidth(0);
+        tc.setMinWidth(0);
+        //获得表头的表格
+        JTableHeader header = table.getTableHeader();
+        //表头剧中
+        DefaultTableCellHeaderRenderer hr = new DefaultTableCellHeaderRenderer();
+        hr.setHorizontalAlignment(JLabel.CENTER);
+        header.setDefaultRenderer(hr);
+        //设置表头字体
+        header.setPreferredSize(new Dimension(header.getWidth(), 40));
+        header.setFont(new Font("楷体", Font.PLAIN, 18));
+        //设置表格行高
+        table.setRowHeight(35);
+        //表格背景色
+        table.setBackground(new Color(223, 241, 234));
+        //表格内容居中
+        DefaultTableCellHeaderRenderer r = new DefaultTableCellHeaderRenderer();
+        r.setHorizontalAlignment(JLabel.CENTER);
+        table.setDefaultRenderer(Object.class, r);
+        //表格加入滚动面板，并设置水平和垂直方才那个均可按需滚动
+        JScrollPane scrollPane = new JScrollPane(table, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        tablePanel.add(scrollPane);
+        tablePanel.revalidate();
+
+        //表格内容监听，根据点击的行得到不同的数据
+        table.getSelectionModel().addListSelectionListener(e -> {
+            int row = table.getSelectedRow();
+//            JOptionPane.showMessageDialog(null,table.getValueAt(row,2).toString() +
+//                    table.getValueAt(row,3).toString());
+            StudentVo studentVo = StudentVo.builder()
+                    .className(table.getValueAt(row,2).toString())
+                    .studentName(table.getValueAt(row, 3).toString())
+                    .phone(table.getValueAt(row, 6).toString())
+                    .address(table.getValueAt(row, 5).toString())
+                    .build();
+            System.out.println(studentVo);
+        });
+
+
+    }
+
 
     private void showTree(List<Department> departments) {
         treePanel.removeAll();
@@ -277,10 +502,6 @@ public class MainFrame extends JFrame {
                     }
                 }
             });
-
-
-
-
         }
     }
 
@@ -349,6 +570,6 @@ public class MainFrame extends JFrame {
     private void createUIComponents() {
         // TODO: place custom component creation code here
 
-        
+
     }
 }

@@ -20,20 +20,18 @@ import com.ding.sm.entity.Department;
  **/
 public class DaoFactory {
 
-    public static AdminDao getAdminDaoInstance(){
-
+    public static AdminDao getAdminDaoInstance() {
         return new AdminDaoImpl();
     }
 
     public static DepartmentDao getDepartmentDaoInstance() {
         return new DepartmentDaoImpl();
     }
-
-    public static ClazzDao getClazzDaoInstance(){
+    public static ClazzDao getClazzDaoInstance() {
         return new ClazzDaoImpl();
     }
-
-    public static StudentDao getStudentDaoInstance(){
+    public static StudentDao getStudentDaoInstance() {
         return new StudentDaoImpl();
     }
 }
+

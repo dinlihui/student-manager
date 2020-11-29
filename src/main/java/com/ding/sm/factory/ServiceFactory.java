@@ -3,10 +3,9 @@ package com.ding.sm.factory;
 import com.ding.sm.serive.AdminService;
 import com.ding.sm.serive.ClazzService;
 import com.ding.sm.serive.DepartmentService;
+import com.ding.sm.serive.StudentService;
+import com.ding.sm.serive.impl.*;
 import com.ding.sm.serive.impl.AdminServiceImpl;
-import com.ding.sm.serive.impl.AdminServiceImpl;
-import com.ding.sm.serive.impl.ClazzServiceImpl;
-import com.ding.sm.serive.impl.DepartmentServiceImpl;
 
 /**
  * @ClassName ServiceFactory
@@ -28,4 +27,9 @@ public class ServiceFactory {
     public static ClazzService getClazzServiceInstance() {
         return new ClazzServiceImpl();
     }
+    public static StudentService getStudentServiceInstance() {
+        return new StudentServiceImpl();
+    }
+
 }
+
