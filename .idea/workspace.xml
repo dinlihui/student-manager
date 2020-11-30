@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02a96f60-a74c-4e87-88cd-8e5e0e6813be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/component/CustomPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/entity/FormatUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/StudentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/ClazzDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/ClazzDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/ClazzDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/ClazzDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/StudentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/entity/Clazz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/entity/Clazz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/factory/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/factory/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/factory/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/factory/ServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/ClazzService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/ClazzService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/ClazzServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/ClazzServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/StudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/StudentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/StudentDaoImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,9 +191,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainFrame" />
+        <item itemvalue="Application.AdminLoginFrame" />
         <item itemvalue="JUnit.StudentDaoTest" />
         <item itemvalue="JUnit.DepartmentServiceTest" />
-        <item itemvalue="Application.AdminLoginFrame" />
         <item itemvalue="JUnit.AdminServiceTest" />
       </list>
     </recent_temporary>
@@ -251,7 +234,8 @@
       <workItem from="1606217446182" duration="1468000" />
       <workItem from="1606375057395" duration="2319000" />
       <workItem from="1606383824958" duration="4070000" />
-      <workItem from="1606653605261" duration="3328000" />
+      <workItem from="1606653605261" duration="4136000" />
+      <workItem from="1606713611879" duration="2047000" />
     </task>
     <servers />
   </component>
@@ -279,22 +263,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="253" y="105" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606115171745" />
-    <state width="1493" height="95" key="GridCell.Tab.0.bottom" timestamp="1606656802972">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1606715905208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="95" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606656802972" />
-    <state width="1493" height="95" key="GridCell.Tab.0.center" timestamp="1606656802972">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606715905208" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1606715905208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="95" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606656802972" />
-    <state width="1493" height="95" key="GridCell.Tab.0.left" timestamp="1606656802972">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606715905208" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1606715905208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="95" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606656802972" />
-    <state width="1493" height="95" key="GridCell.Tab.0.right" timestamp="1606656802972">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606715905208" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1606715905208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="95" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606656802972" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606715905208" />
     <state width="1493" height="223" key="GridCell.Tab.1.bottom" timestamp="1605419713519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
