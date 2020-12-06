@@ -64,5 +64,3 @@ public class DepartmentDaoImpl implements DepartmentDao {
     }
 
 }
-
-

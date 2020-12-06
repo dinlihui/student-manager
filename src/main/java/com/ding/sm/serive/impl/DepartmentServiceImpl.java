@@ -51,4 +51,3 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     }
 }
-

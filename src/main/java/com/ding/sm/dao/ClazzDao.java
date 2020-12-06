@@ -23,26 +23,30 @@ public interface ClazzDao {
     List<Clazz> selectByDepartmentId(int departmentId) throws SQLException;
 
     /**
-     * 获取ClazzDao实例
+     * 查询所有班级
      *
-     * @return ClazzDao 实例
+     * @return List<Clazz>
+     * @throws SQLException 异常
      */
-    public static ClazzDao getClazzDaoInstance() {
-        return new ClazzDaoImpl();
-    }
+    List<Clazz> selectAll() throws SQLException;
 
     /**
      * 新增班级
+     *
      * @param clazz 入参班级实体
      * @return int
      * @throws SQLException 异常
      */
     int insertClazz(Clazz clazz) throws SQLException;
 
-    int deleteClazz(Integer id) throws SQLException;
-
-    List<Clazz> selectAll() throws SQLException;
-
+    /**
+     * 删除班级
+     *
+     * @param clazzId 班级id
+     * @return int
+     * @throws SQLException 异常
+     */
+    int deleteClazz(int clazzId) throws SQLException;
 }
 
 

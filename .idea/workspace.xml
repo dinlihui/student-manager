@@ -2,7 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02a96f60-a74c-4e87-88cd-8e5e0e6813be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/component/ImgFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/component/ImgPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/task/TimeThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/utils/FormatUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/component/CustomPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/component/CustomPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/ClazzDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/ClazzDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/ClazzDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/ClazzDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/DepartmentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/DepartmentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/dao/impl/StudentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/frame/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/ClazzService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/ClazzService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/ClazzServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/ClazzServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/serive/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ding/sm/utils/AliOSSUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ding/sm/utils/AliOSSUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/component/CustomPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/component/CustomPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/ClazzDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/ClazzDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/StudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/ClazzDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/ClazzDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/StudentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/dao/impl/StudentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/frame/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/frame/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/frame/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/frame/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/ClazzService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/ClazzService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/impl/ClazzServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/impl/ClazzServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/serive/impl/StudentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ding/sm/utils/AliOSSUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ding/sm/utils/AliOSSUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +111,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="43" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="445" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="515" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -236,6 +265,9 @@
       <workItem from="1606383824958" duration="4070000" />
       <workItem from="1606653605261" duration="4136000" />
       <workItem from="1606713611879" duration="2047000" />
+      <workItem from="1606735299838" duration="1009000" />
+      <workItem from="1607088113783" duration="303000" />
+      <workItem from="1607255951490" duration="4009000" />
     </task>
     <servers />
   </component>
@@ -243,18 +275,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="589" y="66" key="#SQL_Dialects" timestamp="1606120778795">
+    <state x="589" y="66" key="#SQL_Dialects" timestamp="1607256629470">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="589" y="66" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1606120778795" />
+    <state x="589" y="66" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1607256629470" />
     <state x="621" y="97" width="814" height="670" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605412840321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="621" y="97" width="814" height="670" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605412840321" />
-    <state x="903" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1606118875406">
+    <state x="903" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1607258584203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="903" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606118875406" />
+    <state x="903" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607258584203" />
     <state x="774" y="168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606655934499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -263,22 +295,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="253" y="105" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606115171745" />
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1606715905208">
+    <state width="1276" height="2" key="GridCell.Tab.0.bottom" timestamp="1607259965345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606715905208" />
-    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1606715905208">
+    <state width="1276" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607259965345" />
+    <state width="1276" height="2" key="GridCell.Tab.0.center" timestamp="1607259965345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606715905208" />
-    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1606715905208">
+    <state width="1276" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607259965345" />
+    <state width="1276" height="2" key="GridCell.Tab.0.left" timestamp="1607259965345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606715905208" />
-    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1606715905208">
+    <state width="1276" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607259965345" />
+    <state width="1276" height="2" key="GridCell.Tab.0.right" timestamp="1607259965345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606715905208" />
+    <state width="1276" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607259965345" />
     <state width="1493" height="223" key="GridCell.Tab.1.bottom" timestamp="1605419713519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -323,10 +355,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="45" width="907" height="677" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1606115234676" />
-    <state x="703" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1605533213319">
+    <state x="703" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1607259519411">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="703" y="49" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1605533213319" />
+    <state x="703" y="49" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1607259519411" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606115943095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

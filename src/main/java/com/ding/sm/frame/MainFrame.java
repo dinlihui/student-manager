@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * @ClassName MainFrame
  * @Description TODO
- * @Author 张守杰
+ * @Author ding
  * @Date 2020/11/15
  **/
 public class MainFrame extends JFrame {
@@ -90,7 +90,7 @@ public class MainFrame extends JFrame {
                 .departmentName("院系")
                 .className("班级")
                 .studentName("姓名")
-                .avatar("https://zsj-bucket.oss-cn-beijing.aliyuncs.com/picture/leoo.jpg")
+                .avatar("https://soul1950.oss-cn-beijing.aliyuncs.com/img/cc.jpg")
                 .gender((short)2)
                 .birthday(new Date())
                 .phone("13951905171")
@@ -140,7 +140,7 @@ public class MainFrame extends JFrame {
         选择图片Button.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
             //默认打开路径
-            fileChooser.setCurrentDirectory(new File("D:\\picture"));
+            fileChooser.setCurrentDirectory(new File("D:\\"));
             //对话框显示的范围在centerPanel内
             int result = fileChooser.showOpenDialog(centerPanel);
             if (result == JFileChooser.APPROVE_OPTION) {

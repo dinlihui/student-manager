@@ -21,58 +21,23 @@ public class ClazzDaoImpl implements ClazzDao {
     @Override
     public List<Clazz> selectByDepartmentId(int departmentId) throws SQLException {
         JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
-        Connection connection = JdbcUtil.getConnection();
+        Connection connection = jdbcUtil.getConnection();
         String sql = "SELECT * FROM t_class WHERE department_id = ? ORDER BY id desc ";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setInt(1, departmentId);
         ResultSet rs = pstmt.executeQuery();
-        List<Clazz> clazzList = new ArrayList<>();
-        while (rs.next()) {
-            Clazz clazz = new Clazz();
-            clazz.setId(rs.getInt("id"));
-            clazz.setDepartmentId(rs.getInt("department_id"));
-            clazz.setClassName(rs.getString("class_name"));
-            clazzList.add(clazz);
-        }
+        List<Clazz> list = convert(rs);
         rs.close();
         pstmt.close();
         jdbcUtil.closeConnection();
-        return clazzList;
-
-    }
-
-    @Override
-    public  int insertClazz(Clazz clazz) throws SQLException {
-        JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
-        Connection connection = JdbcUtil.getConnection();
-        String sql = "INSERT INTO t_class (department_id, class_name) VALUES (?, ?)";
-        PreparedStatement pstmt = connection.prepareStatement(sql);
-        pstmt.setInt(1, clazz.getDepartmentId());
-        pstmt.setString(2, clazz.getClassName());
-        int n = pstmt.executeUpdate();
-        pstmt.close();
-        connection.close();
-        return n;
-    }
-
-
-    @Override
-    public int deleteClazz(Integer id) throws SQLException {
-        JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
-        Connection connection = JdbcUtil.getConnection();
-        String sql = "DELETE FROM t_class WHERE id = " + id;
-        PreparedStatement pstmt = connection.prepareStatement(sql);
-        int n = pstmt.executeUpdate();
-        pstmt.close();
-        connection.close();
-        return n;
+        return list;
     }
 
     @Override
     public List<Clazz> selectAll() throws SQLException {
         JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
-        Connection connection = JdbcUtil.getConnection();
-        String sql = "SELECT * FROM t_class ORDER BY id desc";
+        Connection connection = jdbcUtil.getConnection();
+        String sql = "SELECT * FROM t_class ORDER BY id desc ";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
         List<Clazz> list = convert(rs);
@@ -82,18 +47,40 @@ public class ClazzDaoImpl implements ClazzDao {
         return list;
     }
 
-
     private List<Clazz> convert(ResultSet rs) throws SQLException {
         List<Clazz> clazzList = new ArrayList<>();
         while (rs.next()) {
             Clazz clazz = new Clazz();
-            clazz.setId(rs.getInt("id"));
-            clazz.setDepartmentId(rs.getInt("department_id"));
-            clazz.setClassName(rs.getString("class_name"));
+            clazz.setId(rs.getInt(("id")));
+            clazz.setDepartmentId(rs.getInt(("department_id")));
+            clazz.setClassName(rs.getString(("class_name")));
             clazzList.add(clazz);
         }
         return clazzList;
     }
 
+    @Override
+    public int insertClazz(Clazz clazz) throws SQLException {
+        JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
+        Connection connection = JdbcUtil.getConnection();
+        String sql = "INSERT INTO t_class (department_id,class_name) VALUES (?,?) ";
+        PreparedStatement pstmt = connection.prepareStatement(sql);
+        pstmt.setInt(1, clazz.getDepartmentId());
+        pstmt.setString(2, clazz.getClassName());
+        int n = pstmt.executeUpdate();
+        pstmt.close();
+        connection.close();
+        return n;
+    }
+
+    @Override
+    public int deleteClazz(int clazzId) throws SQLException {
+        JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
+        Connection connection = JdbcUtil.getConnection();
+        String sql = "DELETE FROM t_class WHERE id = ? ";
+        PreparedStatement pstmt = connection.prepareStatement(sql);
+        pstmt.setInt(1, clazzId);
+        return pstmt.executeUpdate();
+    }
 
 }

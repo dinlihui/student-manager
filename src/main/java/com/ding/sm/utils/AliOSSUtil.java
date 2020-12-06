@@ -22,7 +22,7 @@ public class AliOSSUtil {
      * @return String 上传成功返回true
      */
     public static String ossUpload(File file) {
-        String bucketDomain = "https://soul1950.oss-cn-beijing.aliyuncs.com";
+        String bucketDomain = "https://soul1950.oss-cn-beijing.aliyuncs.com/";
         String endpoint = "https://oss-cn-beijing.aliyuncs.com";
         String accessKeyId = "LTAI4G4uPuxUCg8sF1JKStCQ";
         String accessKeySecret = "vdAMbzgmr9yqIk2oEEbTleIv67JNtB";
